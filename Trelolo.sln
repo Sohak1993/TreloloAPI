@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trelolo", "Trelolo\Trelolo.csproj", "{8F31FBB2-0A64-4141-9495-33F86F879974}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12ED37C3-6858-457A-904B-9035818FDA3A} = {12ED37C3-6858-457A-904B-9035818FDA3A}
+		{E92FF444-43B5-49CB-A339-D7E764019D95} = {E92FF444-43B5-49CB-A339-D7E764019D95}
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TreloloDB", "TreloloDB\TreloloDB.sqlproj", "{A889FF89-C577-4DB6-A0C2-23CA351253F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{E92FF444-43B5-49CB-A339-D7E764019D95}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12ED37C3-6858-457A-904B-9035818FDA3A} = {12ED37C3-6858-457A-904B-9035818FDA3A}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox", "..\CrowdFundingAPI\ToolBox\ToolBox.csproj", "{12ED37C3-6858-457A-904B-9035818FDA3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{8ACEE981-C999-4280-AEE9-B765F663C43C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12ED37C3-6858-457A-904B-9035818FDA3A} = {12ED37C3-6858-457A-904B-9035818FDA3A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F31FBB2-0A64-4141-9495-33F86F879974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F31FBB2-0A64-4141-9495-33F86F879974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F31FBB2-0A64-4141-9495-33F86F879974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F31FBB2-0A64-4141-9495-33F86F879974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A889FF89-C577-4DB6-A0C2-23CA351253F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A889FF89-C577-4DB6-A0C2-23CA351253F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A889FF89-C577-4DB6-A0C2-23CA351253F0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A889FF89-C577-4DB6-A0C2-23CA351253F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A889FF89-C577-4DB6-A0C2-23CA351253F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A889FF89-C577-4DB6-A0C2-23CA351253F0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E92FF444-43B5-49CB-A339-D7E764019D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92FF444-43B5-49CB-A339-D7E764019D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92FF444-43B5-49CB-A339-D7E764019D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92FF444-43B5-49CB-A339-D7E764019D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12ED37C3-6858-457A-904B-9035818FDA3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12ED37C3-6858-457A-904B-9035818FDA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12ED37C3-6858-457A-904B-9035818FDA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12ED37C3-6858-457A-904B-9035818FDA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ACEE981-C999-4280-AEE9-B765F663C43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACEE981-C999-4280-AEE9-B765F663C43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACEE981-C999-4280-AEE9-B765F663C43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACEE981-C999-4280-AEE9-B765F663C43C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC9B768B-1B4C-4082-AC60-7C21F76F5D23}
+	EndGlobalSection
+EndGlobal
