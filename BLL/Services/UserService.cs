@@ -21,6 +21,11 @@ namespace BLL.Services
             _userRepo = userRepo;
         }
 
+        public User Login(string email, string password)
+        {
+            return MapModel<User, DALM.User>(_userRepo.Login(email, password));
+        }
+
         public bool Create(NewUser user)
         {
             return _userRepo.Create(MapModel<DALM.NewUser, NewUser>(user));

@@ -2,6 +2,7 @@ using BLL.Interfaces;
 using BLL.Services;
 using DAL.Interfaces;
 using DAL.Repositories;
+using Trelolo.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -24,6 +25,8 @@ builder.Services.AddScoped<IListService, ListService>();
 
 builder.Services.AddScoped<ITaskRepo, TaskRepo>();
 builder.Services.AddScoped<ITaskService, TaskService>();
+
+builder.Services.AddScoped<TokenManager>();
 
 builder.Services.AddCors(options =>
 {

@@ -67,7 +67,9 @@
     <Build Include="Triggers\SoftUserDelete.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="TreloloDB.publish.xml" />
     <PostDeploy Include="Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TreloloDB.publish.xml" />
   </ItemGroup>
 </Project>

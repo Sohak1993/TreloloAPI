@@ -32,7 +32,7 @@ namespace DAL.Repositories
 
         public bool Delete(int id)
         {
-            Command cmd = new Command("DELETE FROM Project WHERE Id = @id");
+            Command cmd = new Command("DELETE FROM Projects WHERE Id = @id");
 
             cmd.AddParameter("id", id);
 

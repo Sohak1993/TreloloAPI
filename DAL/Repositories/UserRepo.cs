@@ -58,5 +58,14 @@ namespace DAL.Repositories
             throw new NotImplementedException();
         }
 
+        public User Login(string email, string password)
+        {
+            Command cmd = new Command("LoginUser", true);
+
+            cmd.AddParameter("email", email);
+            cmd.AddParameter("password", password);
+
+            return ExecuteReader<User>(cmd).First();
+        }
     }
 }

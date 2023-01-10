@@ -51,7 +51,7 @@ namespace BLL.Services
 
         public bool Update(FullTask list)
         {
-            throw new NotImplementedException();
+            return _taskRepo.Update(MapModel<DALM.FullTask, FullTask>(list));
         }
     }
 }

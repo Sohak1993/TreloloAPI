@@ -3,6 +3,7 @@ using BLLM = BLL.Models.User;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Trelolo.Models.User;
+using Trelolo.Infrastructure;
 
 namespace Trelolo.Controllers
 {
@@ -11,10 +12,12 @@ namespace Trelolo.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly TokenManager _tokenManager;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, TokenManager tokenManager)
         {
             this._userService = userService;
+            this._tokenManager = tokenManager;
         }
 
         [HttpGet]
@@ -28,6 +31,20 @@ namespace Trelolo.Controllers
         public IActionResult GetById(int id)
         {
             return Ok(_userService.GetById(id));
+        }
+
+        [HttpPost("login")]
+        public IActionResult Login(Login form)
+        {
+            BLLM.User u = _userService.Login(form.Email, form.Password);
+            ConnectedUser cu = new ConnectedUser
+            {
+                Id = u.Id,
+                Email = u.Email,
+                Token = _tokenManager.GenerateToken(u)
+            };
+
+            return Ok(cu);
         }
 
         [HttpPost]

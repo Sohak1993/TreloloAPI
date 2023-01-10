@@ -14,5 +14,6 @@ namespace DAL.Interfaces
         public bool Create(NewUser user);
         public bool Delete(int id);
         public bool Update(NewUser user);
+        public User Login(string email, string password);
     }
 }
