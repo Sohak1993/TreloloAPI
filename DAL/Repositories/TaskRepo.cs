@@ -58,11 +58,12 @@ namespace DAL.Repositories
 
         public bool Update(FullTask task)
         {
-            Command cmd = new Command("UPDATE Tasks SET Name = @name, DeadLine = @DeadLine, IdList = @IdList");
+            Command cmd = new Command("UPDATE Tasks SET Name = @name, DeadLine = @DeadLine, IdList = @IdList WHERE Id = @id");
 
             cmd.AddParameter("name", task.Name);
             cmd.AddParameter("DeadLine", task.DeadLine);
             cmd.AddParameter("IdList", task.IdList);
+            cmd.AddParameter("Id", task.Id);
 
             return ExecuteNonQuery(cmd) == 1;
         }
